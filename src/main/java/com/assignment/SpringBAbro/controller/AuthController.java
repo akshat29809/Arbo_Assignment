@@ -54,7 +54,7 @@ public class AuthController {
                                Model model){
         User existing = userService.findByEmail(user.getEmail());
         String password1= user.getPassword();
-        logger.info("PASSWORD PROVIDED OCCURRED " +user.getPassword());
+        //logger.info("PASSWORD PROVIDED OCCURRED " +user.getPassword());
         logger.info("INVITATION CODE PROVIDED OCCURRED " +user.getInvCode());
         if (existing != null) {
             result.rejectValue("email", null, "There is already an account registered with that email");
